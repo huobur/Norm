@@ -227,5 +227,5 @@ to play with it.
 
 [6] https://en.wikipedia.org/wiki/Portable_Executable
 
-[7] source code url
+[7] https://github.com/huobur/Norm
 
