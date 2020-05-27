@@ -328,13 +328,16 @@ namespace NativeOrManaged
                         total++;
 
                         Console.WriteLine(s1);
-                    }
-
-                    if (Machine == 0x8664)
+                    } 
+                    else if (Machine == 0x8664)
                     {
                         total++;
 
                         Console.WriteLine(s2);
+                    }
+                    else
+                    {
+                        Console.WriteLine ("unknown");
                     }
                 }
                 else
@@ -345,13 +348,16 @@ namespace NativeOrManaged
                         total++;
 
                         Console.WriteLine(s3);
-                    }
-
-                    if (Machine == 0x8664)
+                    } 
+                    else if (Machine == 0x8664)
                     {
                         total++;
 
                         Console.WriteLine(s4);
+                    }
+                    else
+                    {
+                        Console.WriteLine ("unknown");
                     }
                 }
 
