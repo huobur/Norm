@@ -337,7 +337,7 @@ namespace NativeOrManaged
                     }
                     else
                     {
-                        Console.WriteLine ("unknown");
+                        Console.WriteLine ("   unknown");
                     }
                 }
                 else
@@ -357,7 +357,7 @@ namespace NativeOrManaged
                     }
                     else
                     {
-                        Console.WriteLine ("unknown");
+                        Console.WriteLine ("   unknown");
                     }
                 }
 
