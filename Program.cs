@@ -1,4 +1,4 @@
-﻿//
+//
 // This Windows console program is to scan a given file or directory (. the launching directory by default) and its subdirectories to output 
 // the file names of executables and dll modules with info on the file type of native or managed, and 32 bit or 64 bit
 //
@@ -335,9 +335,21 @@ namespace NativeOrManaged
 
                         Console.WriteLine(s2);
                     }
-                    else
+                    else  if ( Machine == 0xAA64 ) // ARM 64
                     {
-                        Console.WriteLine ("   unknown");
+                        total++;
+
+                        Console.WriteLine("  --  64 bit Managed Code - ARM - 0xAA64");
+                    }
+                    else  if ( Machine == 0xD11D ) // ARM 64
+                    {
+                        total++;
+
+                        Console.WriteLine("  --  Managed Code - ARM - 0xD11D");
+                    }
+                    else // we don't know how to interpret "clrRuntimeHeader" at this point of time 2020-05-26
+                    {
+                        Console.WriteLine ("  --  Machine = {0}; clrCore = {1}",Machine.ToString("X2"),clrRuntimeHeader.ToString("X4"));
                     }
                 }
                 else
@@ -357,7 +369,7 @@ namespace NativeOrManaged
                     }
                     else
                     {
-                        Console.WriteLine ("   unknown");
+                        Console.WriteLine ("unknown");
                     }
                 }
 
